@@ -5,12 +5,7 @@ services:
     image: wordpress:v1
     container_name: wordpress
     hostname: wordpress
-    #command: ["tail", "-f", "/dev/null"]
-    #command: ["apachectl", "-D", "FOREGROUND", "&&", "service", "mysqld", "start"]
-    #command: ["apachectl", "-D", "FOREGROUND"]
-    #command: ["service", "mysqld", "start"]
-    #command: bash -c "service mysqld start && apachectl -D FOREGROUND"
-    command: bash -c "apachectl -D FOREGROUND && /etc/init.d/mysql start"
+    command: bash -c "service apache2 start && service mysql start && tail -f /dev/null"
     ports:
       - "80:80"
 
