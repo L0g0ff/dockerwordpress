@@ -10,7 +10,9 @@ RUN mkdir workspace projects
 COPY vscode/default.code-workspace ./workspace/
 
 COPY scripts/install_defaults.sh .
+RUN chmod +x ./install_defaults.sh
 RUN ./install_defaults.sh
 
 COPY scripts/install_wordpress.sh .
+RUN chmod +x ./install_wordpress.sh
 RUN ./install_wordpress.sh
