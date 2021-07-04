@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Enable the "universe" repositories
-add-apt-repository universe
+# Update the local apt database
 apt-get update
 
 # Install pre-requisite packages.
