@@ -29,10 +29,11 @@ Attach with shell:
 docker exec -it wordpress /bin/bash
 ```
 
-# Bring him down
+# Bring him down and delete all the images
 
 ```
-docker compose down
+docker-compose down
+docker images -a -q | xargs docker rmi -f
 ```
 
 Attach with VScode:
